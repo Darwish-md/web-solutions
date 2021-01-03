@@ -40,7 +40,7 @@ body {
 .sline {
   width: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .example_a {
