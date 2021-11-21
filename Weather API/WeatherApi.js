@@ -24,11 +24,11 @@ window.addEventListener('load', () =>{
         .then(data =>{
             console.log(data);
            const {temp, humidity, pressure, temp_max, temp_min} = data.main;
-            temperature.textContent = `${temp.toFixed(2)}°`;
+            temperature.textContent = `${Math.round(temp * 100) / 100}°`;
             pressurePa.textContent = `Pressure is ${pressure} Pa`;
             humidityp.textContent =`Humidity is ${humidity}%` ;
-            maxTemp.textContent = `Max temperature is ${temp_max.toFixed(2)}°`;
-            minTemp.textContent = `Min temperature is ${temp_min.toFixed(2)}°`;
+            maxTemp.textContent = `Max temperature is ${Math.round(temp_max * 100) / 100}°`;
+            minTemp.textContent = `Min temperature is ${Math.round(temp_min * 100) / 100}°`;
             temperatureDescription.textContent = data.weather[0].description;
             timeZone.textContent= `${data.name}/${data.sys.country}`;
             //const {icon} = data.weather[0].icon;
