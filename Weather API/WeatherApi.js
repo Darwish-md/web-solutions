@@ -46,9 +46,9 @@ window.addEventListener('load', () =>{
                 else{
                     unit.textContent = "K";
                     changer.textContent = "Click here for Celcius";
-                    temperature.textContent = `${temp}°`;
-                    maxTemp.textContent = `Max temperature is ${temp_max}°`;
-            minTemp.textContent = `Min temperature is ${temp_min}°`;
+                    temperature.textContent = `${temp.toFixed(2)}°`;
+                    maxTemp.textContent = `Max temperature is ${temp_max.toFixed(2)}°`;
+            minTemp.textContent = `Min temperature is ${temp_min.toFixed(2)}°`;
                 }
                 
       
