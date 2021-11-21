@@ -38,9 +38,9 @@ window.addEventListener('load', () =>{
             changer.addEventListener("click", ()=>{
                 if(unit.textContent === "K"){
                     unit.textContent = "C";
-                    maxTemp.textContent = `Max temperature is ${(temp_max - 273.15).toFixed(2)}°`;
-                    minTemp.textContent = `Min temperature is ${(temp_min - 273.15).toFixed(2)}°`;
-                    temperature.textContent = `${(temp -  273.15).toFixed(2)}°`;
+                    maxTemp.textContent = `Max temperature is ${Math.round((temp_max -  273.15) * 100) / 100}°`;
+                    minTemp.textContent = `Min temperature is ${Math.round((temp_min -  273.15) * 100) / 100}°`;
+                    temperature.textContent = `${Math.round((temp -  273.15) * 100) / 100}°`;
                     changer.textContent = "Click here for Kelvin";
                 }
                 else{
